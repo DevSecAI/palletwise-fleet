@@ -2,7 +2,7 @@
 
 > ⚠️ **ARKO Demo Application — contains intentional vulnerabilities. Do not deploy.**
 
-Fleet tracking and chain-of-custody API for a (fictional) 3PL operator. Part of the [ARKO Coverage Demos](https://github.com/DevSecAI/arko-benchmarks) suite.
+Fleet tracking and chain-of-custody API for a (fictional) 3PL operator. Part of the [ARKO Coverage Demos](https://github.com/DevSecAI/arko-demos) suite.
 
 Stack: Node 20 · Fastify · MongoDB · AWS · Kubernetes.
 
