@@ -1,0 +1,20 @@
+# PAL-CI-002: missing permissions block.
+name: ci
+on:
+  push: { branches: [main] }
+  pull_request: { branches: [main] }
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      # PAL-CI-001: live npm token written into .npmrc.
+      - run: |
+          echo "//registry.npmjs.org/:_authToken=npm_BENCH_PLACEHOLDER" > ~/.npmrc
+      - run: npm ci
+      - run: npm test
+      # PAL-CI-003: image push by tag, no digest pinning.
+      - run: docker build -t 0123.dkr.ecr.eu-west-2.amazonaws.com/palletwise:latest .
+      - run: docker push 0123.dkr.ecr.eu-west-2.amazonaws.com/palletwise:latest

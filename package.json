@@ -1,0 +1,15 @@
+{
+  "name": "palletwise-fleet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": { "start": "node src/server.js", "test": "jest --silent" },
+  "dependencies": {
+    "fastify": "4.24.3",
+    "mongoose": "5.13.20",
+    "qs": "6.5.2",
+    "jsonwebtoken": "8.5.1",
+    "tar": "6.1.0",
+    "axios": "1.6.0"
+  },
+  "devDependencies": { "jest": "29.7.0" }
+}
