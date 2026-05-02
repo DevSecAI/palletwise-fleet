@@ -1,4 +1,4 @@
-benchmark_id: palletwise-fleet
+demo_id: palletwise-fleet
 corpus_version: "0.1.0"
 industry: logistics
 sub_industry: fleet-tracking
